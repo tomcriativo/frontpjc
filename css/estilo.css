@@ -1,0 +1,29 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+#topo {
+  background-color:#472B36 !important;
+}
+#logo {
+  height: 50px;
+}
+
+.link-cad {
+    color: rgb(255,255,255);
+    margin: 20px;
+  }
+  
+  input {
+    border: none;
+    font-family: Roboto, sans-serif;
+    color:#6A404F;
+  }
+  .menu {
+    background: #F0C03B !important;
+
+  }
+  .ico-cart {
+    color: #F0C03B;
+    font-size: 36px;
+  }
