@@ -23,6 +23,14 @@ body {
     background: #F0C03B !important;
 
   }
+  .menu a {color: #472B36 !important;}
+  .menu a:hover {color: #FFF !important;}
+  
+  .navbar-dark .navbar-toggler {
+    color: #472B36 !important;
+    border-color: #472B36 !important;
+    margin: 0 auto;
+}
   .ico-cart {
     color: #F0C03B;
     font-size: 36px;
