@@ -43,6 +43,9 @@ body {
   }
   .rodape h5{
     color: #F0C03B;
+    font-family: Roboto, sans-serif !important;
+    font-weight: bold !important;
+    size: 38px !important;
   }
   .rodape li a{
     color: #FFF;
@@ -51,6 +54,11 @@ body {
     color: #F0C03B;
     text-decoration: none;
   }
-  .footer-copyright {
+  .assinatura{
     background-color: #472B35;
+  }
+  .botao-comprar {
+    background-color: #F0C03B !important;
+    color:#6A404F !important;
+    border: none;
   }
