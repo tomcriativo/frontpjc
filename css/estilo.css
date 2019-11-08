@@ -62,6 +62,7 @@ body {
     color:#6A404F !important;
     border: none;
   }
+  /* Utilizando o Not First-Child ele irá pular o primeiro elemento e nao aplicara o tamanho pre definido. */
  .thumb:not(:first-child) {
   max-width: 150px;
   max-height: 150px;
