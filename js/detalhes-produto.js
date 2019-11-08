@@ -15,9 +15,10 @@ $(document).ready(function () {
             $('#category').html(resposta.category);
             $('#description').html(resposta.description);
             $('#valor').html('De <strike>R$ '+resposta.market_price+'</strike> Por <span class="text-danger">R$ '+resposta.price+'</span>');
-
+            $('.botao-comprar').attr('href', 'finalizar-compra.html?id='+ id);
+           
             for (var x in resposta.images){
-                $('#images').append('<img src="'+resposta.images[x].url+'" class="img-thumbnail">')
+                $('#images').append('<img src="'+resposta.images[x].url+'" class="img-thumbnail thumb">')
             }
 
         }
