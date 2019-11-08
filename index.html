@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Title</title>
+    <title>Frontend - Barato Coletivo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,25 +10,72 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+  <div class="container">
+
+    
+      
+    <div class="card-deck">
+
+      <div class="card produto invisible">
+
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titulo</h5>
+          <p class="card-text">Descrição</p>
+          <h5 class="valor">Valor</h5>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">De R$</small>
+        </div>
+
+      </div>
+  
+
+    </div>
+
+
+
+
+  </div>
+        
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
-    <script> 
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
         $.ajax({
-        url: 'https://playground.barato.com.br/desafio-front/api/offers',
-        type: 'get',
-        dataType: 'json',
-        success: function(resposta) {
-        console.log(resposta);
-        }
+            url: 'https://playground.barato.com.br/desafio-front/api/offers',
+            type: 'GET',
+            dataType: 'json',
+            success: function (resposta) {
+
+                console.log(resposta[0]);
+
+
+                for (var x in resposta) {
+                  var elemento = $('.produto:first-child').clone(); //usar para pegar
+                  elemento.find('.card-img-top').attr('src', resposta[x].image.url);
+                  elemento.find('.card-title').text(resposta[x].title.substring(0, 30) + '...'); //sub string faz pegar a quantidade de caracteres
+                  elemento.find('.card-text').html(resposta[x].description.substring(0, 100) + '...');
+                  elemento.find('.valor').text('R$ ' + resposta[x].market_price);
+                  elemento.removeClass('invisible');
+                  $('.container').append(elemento);
+
+
+
+                } 
+                
+                
+            }
         });
+
     </script>
 
-    
+
 
 </body>
 </html>

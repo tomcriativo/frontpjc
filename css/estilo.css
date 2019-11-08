@@ -1,5 +1,6 @@
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif !important;
+  color: #472B35 !important;
 }
 
 #topo {
@@ -34,4 +35,22 @@ body {
   .ico-cart {
     color: #F0C03B;
     font-size: 36px;
+  }
+  .rodape {
+    background-color: #6A404F;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+  }
+  .rodape h5{
+    color: #F0C03B;
+  }
+  .rodape li a{
+    color: #FFF;
+  }
+  .rodape li a:hover{
+    color: #F0C03B;
+    text-decoration: none;
+  }
+  .footer-copyright {
+    background-color: #472B35;
   }

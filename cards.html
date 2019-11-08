@@ -122,15 +122,18 @@
 
   <!-- Listagem dos Produtos -->
   <main role="main">
-
-
+    <!-- Titulo do Produtos -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 font-weight-bold">Aproveite nossas ofertas!</h1>
+      <p class="lead">Reunimos os melhores produtos e serviços para você em um só lugar! Aproveite!</p>
+    </div>
     <div class="album py-5 bg-light">
       <div class="container">
 
         <div class="row">
-          <!-- Inicio da Listagem de Produtos-->
 
-          <div class="col-md-3 produto d-none">
+          <!-- Inicio da Listagem de Produtos via API -->
+          <div class="col-md-3 produto invisible">
             <div class="card mb-3 shadow-sm">
               <img class="card-img-top"
                 data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
@@ -143,12 +146,27 @@
                   to additional
                   content. This content is a little bit longer.</p>
                 <p class="valor"></p>
-                <a class="btn btn-primary btn-xs" href="#">Acessar</a>
+                <a class="btn btn-primary btn-xs" href="#">Comprar</a>
               </div>
             </div>
           </div>
-          <div class="container-fluid"></div>
+          <!-- Fim da Listagem via API-->
 
+          <div class="card produto invisible">
+
+              <img src="" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Titulo</h5>
+                <p class="card-text">Descrição</p>
+                <h5 class="valor">Valor</h5>
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">De R$</small>
+              </div>
+      
+            </div>
+        
 
         </div> <!-- Fim da Div Principal ROW-->
       </div>
@@ -156,16 +174,66 @@
 
   </main>
 
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-      <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting
-          started guide</a>.</p>
+  <!-- Inicio do Rodape -->
+
+  <footer class="rodape">
+
+    <!-- Mapa do Site -->
+    <div class="container text-center text-md-left">
+      <div class="row">
+        <div class="col-md-3 mx-auto">
+          <h5 class="ext-uppercase mt-3 mb-4">INSTITUCIONAL</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">QUEM SOMOS</a></li>
+            <li><a href="#!">TERMO DE USO</a></li>
+            <li><a href="#!">SEJA PARCEIRO</a></li>
+            <li><a href="#!">FALE CONOSCO!</a></li>
+          </ul>
+
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <h5 class="text-uppercase mt-3 mb-4">CATEGORIAS 1</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">GASTRONOMIA</a></li>
+            <li><a href="#!">VIAGENS</a></li>
+            <li><a href="#!">DOCES</a></li>
+            <li><a href="#!">ENTRETENIMENTO</a></li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <h5 class="text-uppercase mt-3 mb-4">CATEGORIAS 2</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">SERVIÇOS</a></li>
+            <li><a href="#!">SAÚDE & BELEZA</a></li>
+            <li><a href="#!">CINEMA</a></li>
+            <li><a href="#!">HOTÉIS</a></li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <h5 class="text-uppercase mt-3 mb-4">CATEGORIAS 3</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">GASTRONOMIA</a></li>
+            <li><a href="#!">VIAGENS</a></li>
+            <li><a href="#!">DOCES</a></li>
+            <li><a href="#!">ENTRETENIMENTO</a></li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
+    <!-- Assinatura  -->
+    <div class="footer-copyright text-center py-3">
+      <a href="#"><img src="image/logo.png" height="50px"></a>
+    </div>
+    <!-- Assinatura -->
+
   </footer>
+  <!-- Footer -->
+  <!-- Fim Rodape -->
 </body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -175,7 +243,8 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/listagem.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/listar-produtos.js"></script>
 </body>
 
 </html>
